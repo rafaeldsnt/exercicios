@@ -13,7 +13,7 @@ print("Subtração", int(num1)  - int(num2))
 print("Muliplicação", int(num1) * int(num2))
 print("Divisão", int(num1) / int(num2))
 
-input("Pressione  o botão 'Enter', para continuar ... ")
+input("Pressione  o botão 'Enter', para continuar ... ")  
 
 input("Média de notas - Informe três notas para calcularmos a média aritmética! Pressione  o botão 'Enter', para continuar ... ")
 
