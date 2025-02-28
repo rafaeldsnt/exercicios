@@ -51,7 +51,7 @@ input("Pressione  o botão 'Enter', para continuar ... ")
 input("Calculadora de IMC - Calculo do IMC! Pressione  o botão 'Enter', para continuar ... ")
 
 peso_usr= input("Informe seu peso ? ")
-altura_usr= input("Informe sua altura (em cm) ? ")
+altura_usr= input("Informe sua altura ? ")
 
 valor_IMC = ( float(peso_usr) / pow(float(altura_usr),2) )
 
