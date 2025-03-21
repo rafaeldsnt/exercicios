@@ -5,6 +5,7 @@
 
 print("Atribuição de Variáveis")   
 
+
 print("Item 1")
 
 Idade = 5
