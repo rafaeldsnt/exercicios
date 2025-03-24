@@ -1,13 +1,15 @@
 from datetime import date
 from random import randint
 import calendar 
+import socket
 
-input(
-    "Verificação de Acesso ao Sistema! Pressione  o botão 'Enter', para continuar ... "
-)
+
 
 passwordCorrect = "Python-UC01"
 banidosFesta = ("Antonio","Alexandre","Marcos","Sandra","Miguel")
+banidosIPs = ("12.0.0.1","12.0.0.5","12.0.0.4","12.0.0.12","12.0.0.9")
+creditrestriction = ("Antonio","Alexandre","Marcos","Sandra","Miguel")
+
 userSystems = {
     "nome": "",
     "newPassword":""
@@ -19,6 +21,10 @@ current_date = date.today()
 #Aramazenando o ano atual
 current_year = current_date.year
 
+
+input(
+    "Verificação de Acesso ao Sistema! Pressione  o botão 'Enter', para continuar ... "
+)
 
 nameUsr = input("Informe o seu Nome ? ")
 yearBirthday = int(input("Qual é o ano do seu aniversário ? AAAA "))
@@ -214,19 +220,85 @@ elif (ageUser in range(16, 17) and parentsControl == "Sim" ):
 else:
      print("Entrada não Autorizada !!")
      
-     
+
+input("  Acesso a um Site ! Pressione  o botão 'Enter', para continuar ... ")
 
 
+input("  Aguardande estamos identificando seu IP ! Pressione  o botão 'Enter', para continuar ... ")
 
-     
+computerIp = socket.gethostbyname(socket.gethostname())
 
+print(f"O IP detectado ... {computerIp} ")
+
+if (computerIp not in banidosIPs):
+    print("Acesso garantido")
+else:
+     print("Acesso Negado!")
+
+input("  Qual Tipo de Triângulo?  Pressione  o botão 'Enter', para continuar ... ")
+
+firstSide = int(input(" Informe o tamanho do primeiro lado do triângulo ? "))
+secondSide = int(input(" Informe o tamanho do segundo lado do triângulo? "))
+thirdSide = int(input("Informe o tamanho do terceiro lado do triângulo ? "))
+
+if (firstSide == secondSide and secondSide == thirdSide and firstSide == thirdSide):
+    print("É um triangulo Equilátero (todos iguais) ")
+elif (firstSide == secondSide or secondSide == thirdSide or firstSide == thirdSide):
+    print("É um triangulo Isósceles (dois iguais) ")
+elif  (firstSide != secondSide or secondSide != thirdSide or firstSide != thirdSide):
+    print("É um triangulo Escaleno (todos diferentes)")
+    
+
+input("  Pode Fazer Empréstimo?  Pressione  o botão 'Enter', para continuar ... ")
+
+nameUserCredit = (input("Qual é o seu nome ? "))
+YearBirthdayUser = int(input(" Em que ano você nasceu ? YYYYY "))
+currentSalary = float(input(" Qual é a sua renda atual ? "))
+
+if ((nameUserCredit not in creditrestriction) and ((current_year - YearBirthdayUser) > 21) and currentSalary >= 2000):
+    print("Pode realizar o Emprestimo!!!")
+else: 
+    print("Não Pode realizar o Emprestimo!!!")
     
     
 
+input("   Crie um programa que  Pergunte a temperatura  Pressione  o botão 'Enter', para continuar ... ")
+
+currentTemperature = int(input("Qual é a temperatua Atual em Celsius ? "))
+
+if (currentTemperature > 30):
+    print("Está quente !")
+elif (currentTemperature > 10 and currentTemperature <= 30):
+    print("Temperatura agradável ")
+elif (currentTemperature < 10):
+     print("Está frio!")
+else:
+    print("Temperatura não registrada!!!")
+
+input("   Maior de Três Números  Pressione  o botão 'Enter', para continuar ... ")
+
+listNumbers = []
+
+firstNUmber = int(input("Qual é o primeiro número ?  "))
+listNumbers.append(firstNUmber)
+secondNUmber = int(input("Qual é o segundo número ?  "))
+listNumbers.append(secondNUmber)
+thirdNUmber = int(input("Qual é o terceiro número ?  "))
+listNumbers.append(thirdNUmber)
+
+print(f"O maior dos três números é o  {max(listNumbers)}")
 
 
+input("   Verificador de Votação!  Pressione  o botão 'Enter', para continuar ... ")
 
 
+ageVoter = int(input("Qual é a sua Idade ? "))
 
-
-
+if (ageVoter >= 18 and ageVoter <= 69):
+    print("Voto Obrigatório!!! ")
+elif(ageVoter == 16 or ageVoter == 17 or ageVoter == 70):
+     print("Voto Opcional!!! ")
+elif(ageVoter <= 16):
+     print("Voto Proibido !!! ")
+else:
+    print("Idade Inválida!!! ")
