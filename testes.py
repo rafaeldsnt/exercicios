@@ -250,9 +250,29 @@ for intRange in range(10, -1,-1):
     sleep(1)
     
     
-"""
+
+
+#numbers1to10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+#lista_compras = ["arroz", "feijão", "macarrão", "farinha", "óleo", "açúcar", "sal", "leite", "queijo", "manteiga", "frutas", "legumes", "verduras"]
 
 
 
 
+input("  Sequência de Fibonacci!  Pressione  o botão 'Enter', para continuar ... ")
 
+number_fibo =int( input(" Digite Quantos termos você deseja :"))
+
+a = 0
+b = 1
+prox_i = b  
+cont = 1
+
+while cont <= number_fibo:
+    print(prox_i, end=" ")
+    cont += 1
+    a, b = b, prox_i
+    prox_i = a + b
+    
+""" 
+    

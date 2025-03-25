@@ -1,6 +1,9 @@
-from time import sleep  
+from time import sleep 
+import random 
 
 lista_Nomes = ["Antonio","Alexandre","Marcos","Sandra","Miguel"]
+
+lista_compras = ["arroz", "feijão", "macarrão", "farinha", "óleo", "açúcar", "sal", "leite", "queijo", "manteiga", "frutas", "legumes", "verduras"]
 
 
 input("   Imprimir números!  Pressione  o botão 'Enter', para continuar ... ")
@@ -224,7 +227,7 @@ for intRange in range(10, -1,-1):
 
 
 
-input("Soma de números:!  Pressione  o botão 'Enter', para continuar ... ")
+input("Soma de números até que o usuário digite 0.!  Pressione  o botão 'Enter', para continuar ... ")
 resultSum = 0
 num = 0
 question = True
@@ -241,17 +244,91 @@ print(f"A Soma dos numeros foi {resultSum}")
 
 
 
-
 input(" Tabuada!  Pressione  o botão 'Enter', para continuar ... ")
 
-for()
+indice_fat = int(input("Informe um número para o calculo da Tabuada ")) 
+
+
+for num in numbers1to10:
+    print (f"{indice_fat} x {num} = {indice_fat * num}")
+    
+
+
+input(" Números  pares de 1 a 20!  Pressione  o botão 'Enter', para continuar ... ")
+
+
+for numPare in numbers1to20:
+    if(numPare % 2 == 0):
+        print (f"O numero {numPare} é par")
+
+
+
+input(" Adivinhe o número!  Pressione  o botão 'Enter', para continuar ... ")
+
+FindNumber = False
+secretNumber = random.choice(numbers1to10)
+#print(secretNumber)
+
+while(not FindNumber):
+    number_info = int(input("Adivinhe o número !! Informe um numero : ")) 
+    if (secretNumber == number_info):
+        FindNumber = True
+        input(f" Parabéns você encontrou o numero secreto  {secretNumber}")
+        break
+    
+
+input(" Fatorial usanfo um for!  Pressione  o botão 'Enter', para continuar ... ")
+
+number_fatorial = int(input(" Informe um numero para calculo Fatorial : "))
+
+fat = 1
+for i in range(number_fatorial,0,-1):
+    print(i)
+    fat = fat * i
+    print(f"{fat}")
+    
+    
+print(f"O Fatorial do {fat}")
+
+
+input(" Lista de compras!  Pressione  o botão 'Enter', para continuar ... ")
+
+for item in lista_compras:
+    print(f" Item de compra :  {item}")
+
+
+
+input("  Sequência de Fibonacci!  Pressione  o botão 'Enter', para continuar ... ")
+
+number_fibo =int( input(" Digite Quantos termos você deseja :"))
+
+a = 0
+b = 1
+prox_i = b  
+cont = 1
+
+while cont <= number_fibo:
+    print(prox_i, end=" ")
+    cont += 1
+    a, b = b, prox_i
+    prox_i = a + b
+    
+
+input(" Menu interativo!  Pressione  o botão 'Enter', para continuar ... ")
+lista_menu = []
+question = True
 
 while (question):
-    num = int(input("Calculo de número. Informe um número ")) 
-    if (num > 0):
-        resultSum = resultSum + num
+    item_menu = input("Acrescente o item de menu ")
+    if (item_menu != "sair"):
+        lista_menu.append(item_menu)
+        print("Veja o menu")
+        for item_menu in lista_menu:
+            print(f"Item de menu {item_menu}")
+
     else:
         question = False
-      
 
-print(f"A Soma dos numeros foi {resultSum}")
+input("Menu Completo!  Pressione  o botão 'Enter', para continuar ...")
+for item_menupx in lista_menu:
+    print(f"Item de menu : {item_menupx}")
