@@ -66,7 +66,7 @@ def CalculateMediaVetor(vet_dados):
     print(f"Os valores acima da média  são ...  {sorted(maxMedia)}")
     print(f"Os valores menores da média  são ...  {sorted(minMedia)}")
 
-if __name__ == "__main__":
+#if __name__ == "__main__":
     #CalculateMediaVetor(vet_dados)
     #OrdenateNumbersParorImparVetor(vet_dados)
     #RemovedElementsDuplicates(vet_dados)
