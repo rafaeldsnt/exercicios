@@ -127,20 +127,17 @@ def  TamanhoPalavra():
     countPalavas = fraseRead.split()
     
     listKeys = []
-
-    print(f" tamanho da frase: {countPalavas}")
     
     for item in countPalavas:
         SizeWords[len(item)] = item
         listKeys.append(len(item))
-    
-    print (f"A ordem crescente do tamanho das palavras ... {listKeys}")    
-    listKeys = sorted(listKeys)
-    print (f"A ordem crescente do tamanho das palavras ... {listKeys}")
 
-    for itemkey in listKeys:
-        print (f"A ordem crescente do tamanho das palavras ... {itemkey} x {SizeWords[itemkey]}")
         
+    for itemkey in listKeys:
+        print (f" ----------------------------------------  ----------------------------------")
+        print (f" ---------------------------------------- ... Tamanho   x     Palavra")
+        print (f"A ordem crescente do tamanho das palavras ... {itemkey} x {SizeWords[itemkey]}")
+        print (f" ----------------------------------------  ----------------------------------")
     
     
 if __name__ == "__main__":
