@@ -67,7 +67,7 @@ def CalculateMediaVetor(vet_dados):
     print(f"Os valores menores da média  são ...  {sorted(minMedia)}")
 
 if __name__ == "__main__":
-    CalculateMediaVetor(vet_dados)
+    #CalculateMediaVetor(vet_dados)
     #OrdenateNumbersParorImparVetor(vet_dados)
     #RemovedElementsDuplicates(vet_dados)
     #OrdenarVetor(vet_dados)
